@@ -311,6 +311,16 @@ module OEmbed
     #Kinomap << "http://www.kinomap.com/*"
     #add_official_provider(Kinomap)
 
+    SpeakerDeck = OEmbed::Provider.new("https://speakerdeck.com/oembed.json")
+    SpeakerDeck << "http://*speakerdeck.com/*"
+    SpeakerDeck << "https://*speakerdeck.com/*"
+    add_official_provider(SpeakerDeck)
+
+    MediasCCC = OEmbed::Provider.new("https://api.media.ccc.de/public/oembed")
+    MediasCCC << "http://media.ccc.de/*"
+    MediasCCC << "https://media.ccc.de/*"
+    add_official_provider(MediasCCC)
+
     # Provider for oohembed.com, which is a provider aggregator. See
     # OEmbed::Providers::OohEmbed.urls for a full list of supported url schemas.
     # Embed.ly has taken over the oohembed.com domain and as of July 20 all oohEmbed
